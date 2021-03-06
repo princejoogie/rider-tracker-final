@@ -3,12 +3,15 @@ import "../styles/Updates.css";
 import useFireStoreCovid from "../hooks/useFireStoreCovid";
 
 function Updates() {
-  const { docs } = useFireStoreCovid();
-
+  const { docs, millis } = useFireStoreCovid();
+  console.log({ millis });
   return (
     <div className="container updates">
+      {/* <div style={{ height: "50px" }} /> */}
+      <div className="updates-cities-grid">
+        {docs && docs.map((doc) => <City key={doc.id} doc={doc} />)}
+      </div>
       <div style={{ height: "50px" }} />
-      {/* GETS THE DOH TRACKER DATA */}
       <iframe
         src="https://ncovtracker.doh.gov.ph"
         frameBorder="0"
@@ -18,9 +21,7 @@ function Updates() {
         align="middle"
         scrolling="no"
       ></iframe>
-      <div className="updates-cities-grid">
-        {docs && docs.map((doc) => <City key={doc.id} doc={doc} />)}
-      </div>
+      {/* GETS THE DOH TRACKER DATA */}
     </div>
   );
 }
