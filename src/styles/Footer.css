@@ -1,0 +1,12 @@
+.footer {
+  margin-top: 50px;
+  height: 5rem;
+  background-color: #a9ebff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.footer p {
+  margin-top: 0;
+}

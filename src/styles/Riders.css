@@ -1,0 +1,239 @@
+.rider {
+  margin-top: 50px;
+}
+
+.rider-divider {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  height: 1px;
+  width: 90%;
+  margin-right: auto;
+  margin-left: auto;
+  background-color: rgba(0, 0, 0, 1);
+}
+
+.rider small {
+  font-size: 0.5rem;
+  line-height: 2rem;
+  vertical-align: middle;
+}
+
+.rider h4 {
+  margin-top: 20px;
+  line-height: 2rem;
+}
+
+.rider-list-title {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 0.5fr 1fr 2fr;
+  grid-column-gap: 0px;
+  background-color: #a9ebff;
+  margin-top: 10px;
+}
+
+.rider-list-title p {
+  border: 1px solid black;
+  padding: 5px 10px;
+  text-align: center;
+}
+
+.rider-item {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 0.5fr 1fr 2fr;
+  grid-gap: 0px;
+  margin-top: 5px;
+}
+
+.rider-item-red {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 0.5fr 1fr 2fr;
+  background-color: red;
+  grid-gap: 0px;
+  margin-top: 5px;
+}
+
+.rider-item:hover {
+  background: #f2f2f2;
+  user-select: none;
+  cursor: pointer;
+}
+
+.rider-item-red:hover {
+  background: rgb(252, 65, 65);
+  user-select: none;
+  cursor: pointer;
+}
+
+.rider-item p {
+  border: 1px solid black;
+  padding: 5px 10px;
+  text-align: center;
+}
+.rider-item-red p {
+  border: 1px solid black;
+  color: white;
+  font-weight: bold;
+  padding: 5px 10px;
+  text-align: center;
+}
+
+.rider-modal {
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  height: 80vh;
+  background-color: #f2f2f2;
+  border-radius: 20px;
+  box-shadow: 0px 15px 35px rgba(50, 50, 93, 0.1),
+    0px 5px 15px rgba(0, 0, 0, 0.07);
+  padding: 20px;
+}
+
+.rider-modal-wrapper {
+  display: flex;
+  height: 100%;
+  overflow-x: hidden;
+}
+
+.rider-modal-profile {
+  flex: 1;
+  margin-right: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.rider-modal-profile-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.rider-modal-profile-item p {
+  font-size: 1.5rem;
+}
+
+.rider-modal-deliveries {
+  flex: 2;
+  overflow-y: scroll;
+  padding-bottom: 50px;
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none;
+}
+
+.rider-modal-deliveries::-webkit-scrollbar {
+  display: none;
+}
+
+.rider-modal-close {
+  position: absolute;
+  top: -1rem;
+  right: -1rem;
+  font-size: 2.5rem;
+  color: red;
+}
+
+.rider-modal-close:hover {
+  cursor: pointer;
+  color: rgb(255, 124, 124);
+}
+
+.rider-risk-level {
+  font-size: 4rem;
+}
+
+.rcs {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.rcs-bar {
+  margin-top: 20px;
+  height: auto;
+  width: 100%;
+  border: 2px solid black;
+}
+
+.rcs-bar-container {
+  display: flex;
+  flex-direction: row-reverse;
+  height: 3rem;
+  background-image: linear-gradient(to right, green, red);
+}
+
+.rcs-bar-percentage {
+  height: 3rem;
+}
+
+.rcs-levels {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* deliveries */
+
+.rmd-title {
+  margin-top: 20px;
+  width: 100%;
+  display: grid;
+  background-color: #a9ebff;
+  grid-template-columns: 2fr 1fr 1fr 1fr 1fr;
+  grid-column-gap: 0px;
+}
+
+.rmd-title p {
+  border: 1px solid black;
+  text-align: center;
+  padding: 5px 10px;
+}
+
+.rmd-item {
+  margin-top: 5px;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr 1fr;
+  grid-column-gap: 0px;
+}
+
+.rmd-item p {
+  border: 1px solid black;
+  text-align: center;
+  padding: 5px 10px;
+}
+
+@media screen and (max-width: 1023px) {
+  .rider-modal-wrapper {
+    flex-direction: column;
+    overflow-y: scroll;
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none;
+  }
+
+  .rider-modal-wrapper::-webkit-scrollbar {
+    display: none;
+  }
+
+  .rider-modal-profile {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    margin-bottom: 50px;
+  }
+
+  .rider-modal-deliveries {
+    overflow-y: visible;
+  }
+
+  .rider-modal-profile-item:nth-child(2) {
+    margin-left: 20px;
+  }
+}

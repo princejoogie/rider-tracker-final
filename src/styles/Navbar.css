@@ -1,0 +1,55 @@
+.navbar {
+  background-color: #64daff;
+  height: 4rem;
+  width: 100%;
+  display: flex;
+}
+
+.innerNav {
+  max-width: 1200px;
+  width: 90%;
+  margin-right: auto;
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.innerNav h2 {
+  color: #333333;
+  font-weight: 500;
+}
+
+.links {
+  user-select: none;
+  display: flex;
+}
+
+.links li {
+  text-decoration: none;
+  list-style-type: none;
+  height: 4rem;
+  line-height: 4rem;
+  color: #333333;
+  text-align: center;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.links li:hover {
+  background-color: #a9ebff;
+  cursor: pointer;
+}
+
+.current {
+  background-color: #a9ebff;
+}
+
+.debugEmail {
+  position: fixed;
+  top: 0;
+  left: 0;
+  margin-top: 0;
+  background-color: red;
+  display: inline-block;
+}

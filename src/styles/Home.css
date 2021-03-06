@@ -1,0 +1,136 @@
+.home {
+  background-image: url("../assets/homeBG.jpg");
+  background-size: cover;
+  height: 30rem;
+}
+
+.home-jumbotron {
+  display: flex;
+}
+
+.home-jumbotron div:nth-child(1) {
+  flex: 1;
+}
+
+.home-jumbotron div:nth-child(2) {
+  flex: 2;
+}
+
+.home-jumbotron div {
+  height: 30rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.home-jumbotron p {
+  color: whitesmoke;
+  font-size: 1.5rem;
+  line-height: 2.5rem;
+  text-align: justify;
+  text-shadow: 1px 1px black;
+}
+
+.home-jumbotron h1 {
+  font-size: 4rem;
+  color: whitesmoke;
+}
+
+.home-jumbotron span {
+  color: #64daff;
+  text-shadow: 1px 1px white;
+}
+
+.home-jumbotron button {
+  margin-top: 50px;
+  width: 10rem;
+  padding: 10px 20px;
+  border: none;
+  background-color: #64daff;
+  font-size: 1.5rem;
+}
+
+.home-jumbotron button:hover {
+  background-color: #a9ebff;
+  cursor: pointer;
+}
+
+.home-content {
+  display: flex;
+}
+
+.home-content div {
+  margin-top: 20px;
+  flex: 1;
+  height: 25rem;
+  background-color: #64daff;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.home-content img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+.home-content p {
+  text-align: center;
+  line-height: 2rem;
+  margin-top: 20px;
+  margin-right: 20px;
+  margin-left: 20px;
+}
+
+.home-content h3 {
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+
+.hm-right {
+  margin-left: 10px;
+}
+
+.hm-left {
+  margin-right: 10px;
+}
+
+.home-socials {
+  display: flex;
+}
+
+.home-socials div {
+  margin-top: 50px;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.home-socials div:nth-child(odd) {
+  background-color: #64daff;
+}
+
+.home-socials div:nth-child(odd):hover {
+  background-color: #a9ebff;
+  cursor: pointer;
+}
+
+.home-socials div:nth-child(even):hover {
+  background-color: whitesmoke;
+  cursor: pointer;
+}
+
+.home-socials h3 {
+  margin-top: 20px;
+}
+
+.home-socials p {
+  margin-top: 20px;
+}

@@ -1,0 +1,44 @@
+.interactive_map {
+  height: 100%;
+  flex: 3;
+}
+
+.map_container {
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: auto;
+  margin-left: auto;
+  height: 90vh;
+}
+
+.map_controls {
+  flex: 1;
+  height: 100%;
+  padding: 10px;
+  background-color: #f2f2f2;
+}
+
+.map_controls-cities {
+  display: grid;
+  width: 100%;
+  grid-template-columns: 1fr 1fr;
+  grid-column-gap: 10px;
+  grid-row-gap: 10px;
+}
+
+.map_controls-cities button {
+  padding: 10px 10px;
+  background-color: #64daff;
+  border: none;
+  outline: none;
+}
+
+.map_controls-cities button:hover {
+  background-color: #a9ebff;
+}
+
+.map_controls-cities button:active {
+  background-color: #64daff;
+}

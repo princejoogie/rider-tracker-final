@@ -1,0 +1,112 @@
+.testing-signin {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  align-items: center;
+  justify-content: center;
+}
+
+.testing-signin form {
+  display: flex;
+  flex-direction: column;
+}
+
+.testing-signin input {
+  margin-top: 10px;
+  padding: 10px 15px;
+}
+
+.testing-container {
+  margin-top: 2rem;
+}
+
+.testing-container input {
+  padding: 5px 10px;
+}
+
+.testing-container-section {
+  margin-top: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.testing-timer {
+  margin-top: 20px;
+  font-size: 4rem;
+}
+
+.testing-timer-btn {
+  margin-top: 20px;
+  display: flex;
+  height: 50px;
+  width: 150px;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid black;
+  border-radius: 25px;
+  font-size: 1.5rem;
+  background-color: white;
+}
+
+.testing-timer-btn:hover {
+  cursor: pointer;
+  user-select: none;
+  background-color: rgb(240, 240, 240);
+}
+
+.testing-timer-btn:active {
+  background-color: white;
+}
+
+.testing-end-button {
+  user-select: none;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 10px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  background-color: red;
+  color: white;
+}
+
+.testing-end-button:hover {
+  cursor: pointer;
+  background-color: rgb(247, 94, 94);
+}
+
+.testing-end-button:active {
+  background-color: red;
+}
+
+.testing-warning strong {
+  color: red;
+}
+
+.testing-end-button-disabled {
+  user-select: none;
+  pointer-events: none;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 10px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  background-color: red;
+  color: white;
+  background-color: gray;
+}
+
+.testing-resetBtn:hover {
+  cursor: pointer;
+}

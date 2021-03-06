@@ -1,0 +1,9 @@
+DONE - scaling of percentage for risk level
+DONE - more than 1 rider for testing
+DONE - history span of 14 days in the modal part
+DONE - when not logged in, only Login Page, Home Page, and COVID-19 Updates will be accessed
+DONE - when logged in, Interactive Map and Rider List can be accessed by the user
+DONE - change online status on login and logout
+DONE - color coding for the overall percentage
+DONE - color coding for the risk level in the modal part
+- overall percentage depends on the highest rider risk percentage on the history for 14 days

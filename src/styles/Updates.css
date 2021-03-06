@@ -1,0 +1,24 @@
+.updates {
+  display: flex;
+  flex-direction: column;
+}
+
+.updates-cities-grid {
+  margin-top: 50px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-column-gap: 20px;
+  grid-row-gap: 20px;
+}
+
+.updates-city {
+  background-color: #a9ebff;
+  padding: 15px 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.updates-city p {
+    margin-top: 0;
+}
