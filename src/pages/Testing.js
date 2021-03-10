@@ -136,6 +136,8 @@ function Testing() {
     const startTime = new Date();
     let areaRisk = (cityCases / 2000) * 100;
 
+    if (cityCases > 2000) areaRisk = 100;
+
     let riderRisk = 0;
     let duration = "00:00";
     if (withinProximity) {
@@ -144,6 +146,8 @@ function Testing() {
       let time = a[0] * 60 + a[1];
       riderRisk = (time / (16 * 60)) * 100;
     }
+
+    if (riderRisk > 100) riderRisk = 100;
 
     let riskPercentage = areaRisk * 0.2 + riderRisk * 0.8;
     riskPercentage = parseFloat(riskPercentage.toFixed(2));
