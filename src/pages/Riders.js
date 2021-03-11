@@ -139,7 +139,7 @@ function Modal({ riderID, setCurrentRider }) {
             <p>Delivery Time</p>
             <p>Duration</p>
             <p>Risk Level</p>
-            <p>Percentage</p>
+            <p>Overall Risk Percentage</p>
           </div>
 
           <div className="rider-divider" />

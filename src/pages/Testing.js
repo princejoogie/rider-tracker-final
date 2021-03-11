@@ -149,7 +149,7 @@ function Testing() {
 
     if (riderRisk > 100) riderRisk = 100;
 
-    let riskPercentage = areaRisk * 0.2 + riderRisk * 0.8;
+    let riskPercentage = areaRisk * 0.25 + riderRisk * 0.75;
     riskPercentage = parseFloat(riskPercentage.toFixed(2));
     let riskLevel;
     if (riskPercentage <= 25) riskLevel = "Low Risk";

@@ -10,10 +10,14 @@ export const AuthProvider = ({ children }) => {
   useEffect(() => {
     const unsubscribe = auth.onAuthStateChanged(async (user) => {
       if (user) {
-        const doc = await (
-          await db.collection("riders").doc(user.uid).get()
-        ).data();
-        setIsAdmin(doc.isAdmin);
+        try {
+          const doc = await (
+            await db.collection("riders").doc(user.uid).get()
+          ).data();
+          setIsAdmin(doc.isAdmin);
+        } catch (e) {
+          console.log(e.message);
+        }
       } else {
         setIsAdmin(false);
       }

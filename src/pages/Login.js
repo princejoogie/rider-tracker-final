@@ -3,7 +3,7 @@ import "../styles/Login.css";
 import wave from "../assets/wave.png";
 import avatar from "../assets/avatar.svg";
 import bg from "../assets/bg.svg";
-import { auth } from "../base";
+import { auth, googleProvider } from "../base";
 import { useHistory } from "react-router-dom";
 import { db } from "../base";
 
@@ -14,30 +14,52 @@ function Login() {
 
   const handleChange = (e, func) => func(e.target.value);
 
+  const handleOnline = async ({ user, additionalUserInfo }) => {
+    if (additionalUserInfo.isNewUser) {
+      await db.collection("riders").doc(user.uid).set({ registered: false });
+    }
+
+    let registered = await (
+      await db.collection("riders").doc(user.uid).get()
+    ).data().registered;
+
+    console.log({ registered });
+    if (!registered) {
+      auth.signOut();
+      alert(
+        "Account not Registered, Please contact ridertrackingsystem@gmail.com"
+      );
+    } else {
+      await db.collection("riders").doc(user.uid).set(
+        {
+          online: true,
+        },
+        { merge: true }
+      );
+
+      const res = await (
+        await db.collection("riders").doc(user.uid).get()
+      ).data();
+      console.log(res);
+      if (!res.isAdmin) {
+        history.replace("/testing");
+      } else {
+        history.replace("/");
+      }
+    }
+  };
   // LOGIN BUTTON PRESSED
   const submit = async (e) => {
     e.preventDefault();
     await auth
       .signInWithEmailAndPassword(email, password)
-      .then(async ({ user }) => {
-        await db.collection("riders").doc(user.uid).set(
-          {
-            online: true,
-          },
-          { merge: true }
-        );
-
-        const res = await (
-          await db.collection("riders").doc(user.uid).get()
-        ).data();
-        console.log(res);
-        if (!res.isAdmin) {
-          history.replace("/testing");
-        } else {
-          history.replace("/");
-        }
-      })
+      .then(handleOnline)
       .catch(alert);
+  };
+
+  const handleGoogleLogin = (e) => {
+    e.preventDefault();
+    auth.signInWithPopup(googleProvider).then(handleOnline).catch(console.log);
   };
 
   return (
@@ -75,8 +97,20 @@ function Login() {
                 />
               </div>
             </div>
-            <a href="/">Forgot Password?</a>
             <input type="submit" className="login-btn" value="Login" />
+
+            <button
+              type="button"
+              style={{
+                backgroundColor: "white",
+                border: "1px solid black",
+                padding: "10px 20px 10px 20px",
+                borderRadius: "10px",
+              }}
+              onClick={handleGoogleLogin}
+            >
+              Sign in With Google
+            </button>
           </form>
         </div>
       </div>
