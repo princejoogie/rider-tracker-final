@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import useFireStoreDeliveries from "../hooks/useFireStoreDeliveries";
 import useFireStoreRiders from "../hooks/useFireStoreRiders";
 import useFireStoreRiderID from "../hooks/useFireStoreRiderID";
@@ -10,7 +10,7 @@ function Riders() {
   const [currentRider, setCurrentRider] = useState(null);
 
   return (
-    <div className="rider container">
+    <div className="container rider">
       {currentRider && (
         <Modal riderID={currentRider} setCurrentRider={setCurrentRider} />
       )}
@@ -75,21 +75,9 @@ function Item({ riderID, setCurrentRider }) {
 function Modal({ riderID, setCurrentRider }) {
   const { deliveries } = useFireStoreDeliveries(riderID);
   const { rider, highestRisk } = useFireStoreRiderID(riderID);
-  const colors = ["#2E7F18", "#675E24", "#8D472B", "#B13433", "#FF0000"];
-  const [currColor, setCurrColor] = useState();
-
-  useEffect(() => {
-    if (rider) {
-      if (rider.averageRiskLevel < 20) setCurrColor(colors[0]);
-      else if (rider.averageRiskLevel < 40) setCurrColor(colors[1]);
-      else if (rider.averageRiskLevel < 60) setCurrColor(colors[2]);
-      else if (rider.averageRiskLevel < 80) setCurrColor(colors[3]);
-      else setCurrColor(colors[4]);
-    }
-  }, [rider]);
 
   return (
-    <div className="rider-modal container">
+    <div className="container rider-modal">
       <div className="rider-modal-wrapper">
         <div
           className="rider-modal-close"

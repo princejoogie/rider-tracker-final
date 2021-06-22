@@ -15,8 +15,6 @@ function Testing() {
   const [address, setAddress] = useState();
   const [loc, setLoc] = useState();
   const [city, setCity] = useState();
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
   const [withinProximity, setWithinProximity] = useState(false);
   const [playing, setPlaying] = useState(false);
   const [cases, setCases] = useState();
@@ -43,10 +41,6 @@ function Testing() {
     "Valenzuela",
     "Manila",
   ];
-
-  const authenticate = async () => {
-    await auth.signInWithEmailAndPassword(email, password).then().catch(alert);
-  };
 
   // GET ADDRRESS FROM LAT LONG OF DEVICE
   const getLoc = async (lat, lng) => {
@@ -192,7 +186,7 @@ function Testing() {
   return (
     <div>
       {loggedIn && currentUser[0] ? (
-        <div className="testing-container container">
+        <div className="container testing-container">
           <input
             type="submit"
             value="Logout"

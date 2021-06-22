@@ -14,7 +14,7 @@ function PrivateRoute({ children }) {
     } else {
       setAuthenticated(true);
     }
-  }, [isAdmin]);
+  }, [isAdmin, history]);
 
   return authenticated ? children : <div>loading</div>;
 }

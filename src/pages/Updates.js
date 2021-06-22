@@ -13,7 +13,7 @@ function Updates() {
       </div>
       <div style={{ height: "50px" }} />
       <iframe
-        src="https://ncovtracker.doh.gov.ph"
+        src="https://public.tableau.com/views/COVID-19CasesandDeathsinthePhilippines_15866705872710/Home?:embed=y&:embed_code_version=3&:loadOrderID=0&:display_count=y&publish=yes&:origin=viz_share_link"
         frameBorder="0"
         height="1400px"
         width="100%"
